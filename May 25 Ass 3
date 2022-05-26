@@ -1,0 +1,19 @@
+def plus_one(l):
+    c=0
+    n=10**(len(l)-1)
+    for i in l:
+        if i<10:
+            c+=(n*i)
+        else:
+            c+=i
+        n=n//10
+    c+=1
+    m=[]
+    while(c>0):
+        k=c%10
+        c=c//10
+        m.append(k)
+    m.reverse()
+    return m
+l=list(map(int,input().split()))
+print(plus_one(l))
